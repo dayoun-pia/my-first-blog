@@ -2,21 +2,22 @@
 <head>
 <title>dayoun's blog</title>
 </head>
+
 <body>
+
 <div>
-<h1><a href=""><font color='pink'>dayoun's blog</font></a></h1>
-</div>
+    <h1><a href=""><font color='pink'>dayoun's blog</font></a></h1>
+    </div>
 <br>
 
+{% for post in posts %}
 <div>
-<p> publisehd : 02.11.2019, 1:14 </p>
+    <p>published : {{ post.published_date }}</p>
+    <h1><a href=""><font color='skyblue'>{{ post.title }}</font></a></h1>
+    <p>{{ post.text|linebreaksbr }}</p>
+   </div>
 
-<h2><a href="">
-My first post</a></h2>
-<p>hello
-</div>
-
-
+{% endfor %}
 
 </body>
 </html>
